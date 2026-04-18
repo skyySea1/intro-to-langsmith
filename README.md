@@ -35,6 +35,7 @@ Here’s our recommended setup to get started with the course.
 ### Installation
 
 Download the course repository
+
 ```bash
 # Clone the repo
 git clone --depth 1 https://github.com/langchain-ai/intro-to-langsmith.git
@@ -42,6 +43,7 @@ $ cd intro-to-langsmith
 ```
 
 Make a copy of the example .env
+
 ```bash
 # Create .env file
 cp example.env .env
@@ -121,8 +123,8 @@ jupyter lab
 
 </details>
 
-
 ## 📚 Lessons
+
 This repository contains five Modules that serve as introductions to many of LangSmith's most-used features.
 
 ---
@@ -163,12 +165,12 @@ This repository contains five Modules that serve as introductions to many of Lan
 - L4 Monitoring
 - L5 Dashboards
 
-
 ## 📖 Related Resources
 
 ### Setup Verification Issues
 
 **What the verification procedure checks:**
+
 - ✅ Python executable location and version (must be >=3.12, <3.14)
 - ✅ Virtual environment is properly activated
 - ✅ Required packages are installed with correct versions
@@ -183,6 +185,7 @@ This repository contains five Modules that serve as introductions to many of Lan
 If you see an error like `ModuleNotFoundError: No module named 'dotenv'`, you're likely running Python outside the virtual environment.
 
 **Solution:**
+
 - Use `uv run python env_utils.py` (recommended), or
 - Activate the virtual environment first:
   - macOS/Linux: `source .venv/bin/activate`
@@ -196,6 +199,7 @@ If you see an error like `ModuleNotFoundError: No module named 'dotenv'`, you're
 If you see a warning about "ENVIRONMENT VARIABLE CONFLICTS DETECTED", you have API keys set in your system environment that differ from your .env file. Since `load_dotenv()` doesn't override existing variables by default, your system values will be used.
 
 **Solutions:**
+
 1. Do nothing and accept the system environment variable value
 2. Unset the conflicting system environment variables for this shell session (commands provided in warning)
 3. Use `load_dotenv(override=True)` in your notebooks to force .env values to take precedence
@@ -207,6 +211,7 @@ If you see a warning about "ENVIRONMENT VARIABLE CONFLICTS DETECTED", you have A
 <summary>LangSmith Tracing Errors</summary>
 
 If you see "LANGSMITH_TRACING is enabled but LANGSMITH_API_KEY still has the example/placeholder value", you need to either:
+
 1. Set a valid LangSmith API key in your .env file, or
 2. Comment out or set `LANGSMITH_TRACING=false` in your .env file
 
@@ -220,6 +225,7 @@ Note: LangSmith is optional for evaluation and tracing. The course works without
 If you see a warning about Python version not satisfying requirements, you need Python >=3.12 and <3.14.
 
 **Solution:**
+
 - If using `uv`: Run `uv sync` which will automatically install the correct Python version
 - If using pip: Install Python 3.12 or 3.13 using [pyenv](#python-virtual-environments) or from [python.org](https://www.python.org/downloads/)
 
@@ -276,6 +282,7 @@ For more information on LangSmith, see our docs [here](https://docs.langchain.co
 Self-Hosted LangSmith
 
   If you are using a self-hosted version of LangSmith, you'll need to set this environment variable in addition to the others - see this [guide](https://docs.smith.langchain.com/self_hosting/usage) for more info
+
   ```
   LANGSMITH_ENDPOINT = "<your-self-hosted-url>/api/v1"
   ```
@@ -283,6 +290,7 @@ Self-Hosted LangSmith
 EU Instance
 
   If your LangSmith instance is set to the EU, you'll need to set this environment variable in addition to the others.
+
   ```
   LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com
   ```
