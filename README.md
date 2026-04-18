@@ -8,6 +8,17 @@ This repository is the companion to the course located [HERE](https://academy.la
 
 In this course, we will walk through the fundamentals of LangSmith - exploring observability, prompt engineering, evaluations, feedback mechanisms, and production monitoring.
 
+## Derived Project Notice
+
+This repository may be published as a derived work of the original course repository:
+
+- Original project: [langchain-ai/intro-to-langsmith](https://github.com/langchain-ai/intro-to-langsmith)
+- Original copyright: Copyright (c) 2024 LangChain
+- License: MIT (see [LICENSE](LICENSE))
+
+If you republish this project, keep the original copyright and license
+notice in all copies or substantial portions of the software.
+
 ---
 
 ## 🚀 Setup
